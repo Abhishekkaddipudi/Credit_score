@@ -1,4 +1,4 @@
-# Project Description: Credit Score Classifier
+# Credit Score Classifier
 
 ## Overview
 
