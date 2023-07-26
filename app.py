@@ -14,7 +14,28 @@ def predciton(x):
     return pred[y_pred[0]]
 
 
+def parse_request_form_values(form_values):
+    parsed_values = np.empty(len(form_values), dtype=object)
+    for i, value in enumerate(form_values):
 
+
+        try:
+            parsed_values[i] = float(value)
+        except TypeError:
+            try:
+                parsed_values[i] = int(value)
+            except TypeError:
+                parsed_values[i] = str(value)
+            except ValueError:
+                parsed_values[i] = str(value)                
+        except ValueError:
+            try:
+                parsed_values[i] = int(value) 
+            except ValueError:
+                parsed_values[i] = str(value)
+            except TypeError:
+                parsed_values[i] = str(value)
+    return parsed_values
 
 app = Flask(__name__)
 
@@ -26,9 +47,8 @@ def home():
 def predict():
 
  
-    data=np.array([float(x) if isinstance(x,str) else x  for x in request.form.values() ])
-  
-
+    data=list(request.form.values())
+    data=parse_request_form_values(data)
     predict=predciton([data[6:]])
 
     return render_template("result.html",var=predict)
