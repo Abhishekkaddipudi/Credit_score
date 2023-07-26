@@ -55,7 +55,7 @@ We will leverage GitHub Actions to automate the deployment process:
 ```
    - Build the Docker image for the Flask app.
    - Push the Docker image to Docker Hub.
-   - Deploy the Docker image on the Render cloud platform,                  making the Credit Score Classifier accessible for end-users.
+   - Deploy the Docker image on the Render cloud platform, making the Credit Score Classifier accessible for end-users.
 ```
 ## More info
 check out [ipynb](https://github.com/Abhishekkaddipudi/Credit_score/blob/main/CREDIT_SCORE_CLASSIFIER.ipynb) for info on EDA
