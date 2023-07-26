@@ -4,6 +4,8 @@
 
 This project aims to build a Credit Score Classifier to predict credit scores based on a credit score dataset. The dataset is sourced from [Kaggle](https://www.kaggle.com/datasets/parisrohan/credit-score-classification). We will perform Exploratory Data Analysis (EDA) and feature engineering on the dataset, selecting the last 22 columns for analysis.
 
+- [LINK TO THE APP](https://credit-score-identifier.onrender.com/)
+
 ## Dataset Columns
 
 ```markdown
